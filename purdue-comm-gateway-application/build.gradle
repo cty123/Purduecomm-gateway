@@ -1,0 +1,4 @@
+dependencies {
+    compile project (':purdue-comm-gateway-infrastructure')
+    compile project (':purdue-comm-gateway-domain')
+}

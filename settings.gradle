@@ -1,3 +1,6 @@
 rootProject.name = 'purdue-comm'
 
-include ':purdue-comm-gateway-infrastructure', ':purdue-comm-gateway-adapter'
+include ':purdue-comm-gateway-infrastructure'
+include ':purdue-comm-gateway-adapter'
+include ':purdue-comm-gateway-domain'
+include ':purdue-comm-gateway-application'

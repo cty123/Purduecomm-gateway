@@ -1,25 +1,25 @@
 package com.cty.purduecomm.gateway.adapter.controller;
 
-// import com.cty.purduecomm.service.AuthUserService;
+import com.cty.purduecomm.gateway.domain.entity.AuthUser;
+import com.cty.purduecomm.gateway.domain.service.AuthUserService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @AllArgsConstructor
 public class TestController {
 
-//    private final AuthUserService authUserService;
+    private AuthUserService authUserService;
 
     @GetMapping("/welcome")
     public String welcome() {
         return "welcome";
     }
 
-//    @GetMapping("/test")
-//    public void test() {
-//        authUserService.insertNewUser();
-//    }
+
+    @PostMapping("/test")
+    public void test(@RequestBody AuthUser authUser) {
+        authUserService.insertAuthUser(authUser);
+    }
 }
