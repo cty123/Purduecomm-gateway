@@ -7,9 +7,9 @@ spring:
   cloud:
     nacos:
       config:
-        server-addr: 18.188.188.19:8848
+        server-addr: 127.0.0.1:8848
       discovery:
-        server-addr: 18.188.188.19:8848
+        server-addr: 127.0.0.1:8848
     gateway:
       routes:
         - id: user_route
@@ -73,7 +73,7 @@ spring:
   datasource: ## 其他参数就不配置了
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      url: jdbc:mysql://cs407.czzfuvxszxe2.us-east-2.rds.amazonaws.com:3306/Purduecomm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://purduecomm.czzfuvxszxe2.us-east-2.rds.amazonaws.com:3306/Purduecomm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
       username: cs407
       password: 407iquest
       driver-class-name: com.mysql.cj.jdbc.Driver
