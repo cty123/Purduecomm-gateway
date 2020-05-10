@@ -1,0 +1,28 @@
+server:
+  port: 8090
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/MyAuth
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: StandardClient
+            client-secret: none
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay
+      routes:
+        - id: flights-service
+          uri: http://www.google.com
+          predicates:
+            - Path=/google/**
+        - id: hotels-service
+          uri: http://127.0.0.1:8082/hotels
+          predicates:
+            - Path=/hotels/**

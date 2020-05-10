@@ -1,10 +1,10 @@
-package com.cty.gatewayauth;
+package com.example.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayAuthApplicationTests {
+class DemoApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package com.cty.gatewayauth;
+package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +8,6 @@ public class TestController {
 
     @RequestMapping("/Test")
     public String Test() {
-        return "Hello World";
+        return "Test";
     }
 }
