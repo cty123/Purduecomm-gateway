@@ -1,0 +1,6 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: resource
+#          uri: http://localhost:9000
