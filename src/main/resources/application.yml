@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8080
 
 spring:
   security:
@@ -7,22 +7,18 @@ spring:
       client:
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/auth/realms/MyAuth
-            user-name-attribute: preferred_username
+            issuer-uri: http://192.168.1.4:30000/auth/realms/myapp
+#            user-name-attribute: preferred_username
         registration:
           keycloak:
-            client-id: StandardClient
+            client-id: standard-client
             client-secret: none
   cloud:
     gateway:
       default-filters:
         - TokenRelay
       routes:
-        - id: flights-service
-          uri: http://www.google.com
+        - id: recource
+          uri: http://localhost:8090
           predicates:
-            - Path=/google/**
-        - id: hotels-service
-          uri: http://127.0.0.1:8082/hotels
-          predicates:
-            - Path=/hotels/**
+            - Path=/resource
